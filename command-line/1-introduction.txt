@@ -1,1 +1,36 @@
 
+Last login: Thu Feb 13 08:10:29 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+grnq61-68:~ tucke039$ ls
+Desktop		Downloads	Movies		Pictures	PycharmProjects
+Documents	Library		Music		Public
+grnq61-68:~ tucke039$ cd /Volume/Home
+-bash: cd: /Volume/Home: No such file or directory
+grnq61-68:~ tucke039$ cd /Volume/Home/
+-bash: cd: /Volume/Home/: No such file or directory
+grnq61-68:~ tucke039$ cd /Volumes/Home
+grnq61-68:Home tucke039$ ls
+Staff	Student
+grnq61-68:Home tucke039$ cd Student
+grnq61-68:Student tucke039$ ls
+a	d	g	j	m	p	s	v	y
+b	e	h	k	n	q	t	w	z
+c	f	i	l	o	r	u	x
+grnq61-68:Student tucke039$ cd t
+grnq61-68:t tucke039$ cd tucke039
+grnq61-68:tucke039 tucke039$ ls
+SP_repository		githubToken.txt.rtf
+grnq61-68:tucke039 tucke039$ cd SP_repository
+grnq61-68:SP_repository tucke039$ ls
+README.md	command-line	python
+grnq61-68:SP_repository tucke039$ pwd
+/Volumes/Home/Student/t/tucke039/SP_repository
+grnq61-68:SP_repository tucke039$ ls
+README.md	command-line	python
+grnq61-68:SP_repository tucke039$ cd ~
+grnq61-68:~ tucke039$ pwd
+/Users/tucke039
+grnq61-68:~ tucke039$
