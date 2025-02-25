@@ -18,7 +18,7 @@ T0_room = 20    # Egg temperature from room (°C)
 # Function to calculate cooking time
 def calculate_cook_time(mass, T0):
     # Calculate time using the given formula
-    t = (mass ** (2/3) * c * rho ** (1/3)) / (k * (math.pi * 4 / 3) ** (2/3)) * \
+    t = (mass ** (2/3) * c * rho ** (1/3)) / (k * math.pi ** 2 * (math.pi * 4 / 3) ** (2/3)) * \
         math.log(0.76 * (T0 - Tw) / (Ty - Tw))
     return t / 60  # Convert seconds to minutes
 
