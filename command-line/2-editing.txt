@@ -1,1 +1,41 @@
+parkerw@MAC224008 command-line % cd Documents
+cd: no such file or directory: Documents
+parkerw@MAC224008 command-line % cd ~
+parkerw@MAC224008 ~ % ls
+AnalemmaPlot.png				all.txt
+Applications					java_error_in_pycharm.hprof
+Binaries					java_error_in_pycharm_32888.log
+CanvasAccessToken.20240122			java_error_in_pycharm_50978.log
+Desktop						java_error_in_pycharm_73232.log
+Documents					jbr_err_pid32888.log
+Downloads					jbr_err_pid50978.log
+Google Drive					lazy_dog.txt
+Library						ls-error.txt
+Movies						ls-output.txt
+Music						ls.txt
+OneDrive - University of Wisconsin - Parkside	src
+Pictures					test.html
+Public						tmp
+Runs						triplea
+parkerw@MAC224008 ~ % cd Documents
+parkerw@MAC224008 Documents % touch notes.txt
+parkerw@MAC224008 Documents % vi notes.txt
+parkerw@MAC224008 Documents % cat notes.txt
+This is my first file created in the terminal.
+parkerw@MAC224008 Documents % touch shopping_list.txt
+parkerw@MAC224008 Documents % vi shopping_list.txt 
+parkerw@MAC224008 Documents % cat shopping_list.txt 
+apples, bread, milk, coffee
+parkerw@MAC224008 Documents % 
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,17 +1,17 @@
-Partner:
+Partner: Riley
 
 What Went Well
----
+--- Quick and made sense
 
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: allow permission access
 
-* Communication:
+* Communication: Could relay information a little faster
 
-* Pacing:
+* Pacing: Could type a little bit faster
 
-* Division of responsibility
+* Division of responsibility: We could find out who is a better driver and navigator and decide our roles based on that.
 
-* Code quality:
+* Code quality: We could try to have less typos

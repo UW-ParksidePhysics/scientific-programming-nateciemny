@@ -1,0 +1,18 @@
+Partner: Professor
+
+What Went Well
+---
+We got one of the tasks completed succesfully and started another one
+
+
+What Would Make Next Time 1% Better
+---
+* Focus: good
+
+* Communication: good ask navigator more questions
+
+* Pacing: Good, went out of order and made it longer
+
+* Division of responsibility: good, navigator should talk more
+
+* Code quality: the finished one worked, the other one needs work
