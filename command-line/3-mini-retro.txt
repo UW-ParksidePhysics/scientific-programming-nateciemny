@@ -1,17 +1,17 @@
-Partner:
+Partner: Professor
 
 What Went Well
 ---
-
+It went quick and smooth
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: We did not get distracted
 
-* Communication:
+* Communication: We assured each other we were on the same page
 
-* Pacing:
+* Pacing: Went well and efficient
 
-* Division of responsibility
+* Division of responsibility: We did good for each of our roles
 
-* Code quality:
+* Code quality: We followed instructions without mistakes
