@@ -2,7 +2,7 @@ temperature_interval = 10
 fahrenheit_temperature = 0
 maximum_temperature = 100
 
-print(f'T (°F)\t T (°C)\t T (°C_hat)')
+print(f'T (°F)\t T (°C)\t T (°\u0108)')
 print(30 * "=")
 
 while fahrenheit_temperature <= maximum_temperature:
