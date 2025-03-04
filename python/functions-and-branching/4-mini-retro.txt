@@ -14,4 +14,4 @@ What Would Make Next Time 1% Better
 
 * Division of responsibility: Not much could change
 
-* Code quality: No errors but code was not finished
+* Code quality: No errors but code was not complete
