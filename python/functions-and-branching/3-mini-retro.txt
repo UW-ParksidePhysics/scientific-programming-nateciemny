@@ -1,0 +1,17 @@
+Partner: Carter
+
+What Went Well
+---
+We go the beginning of teh function typed out
+
+What Would Make Next Time 1% Better
+---
+* Focus: We could finish the problems more efficiently
+
+* Communication: Could ask/answer more of each other's questions
+
+* Pacing: We could get multiple problems finished
+
+* Division of responsibility: Not much to change
+
+* Code quality: No errors but code was not finished
