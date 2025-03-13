@@ -1,1 +1,17 @@
+Partner: Eden
 
+What Went Well
+---
+We created the directories and deleted them succesfully.
+
+What Would Make Next Time 1% Better
+---
+* Focus: Be more efficient
+
+* Communication: We could have asked each other more questions
+
+* Pacing: We could have caught some of our errors faster
+
+* Division of responsibility: We split our reponsibilities well
+
+* Code quality: No typos
