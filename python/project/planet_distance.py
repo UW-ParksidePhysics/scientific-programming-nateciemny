@@ -1,6 +1,7 @@
 """
 This code takes the distances between each planet and creates an icon representing each planet
 """
+__author__ = "Nate Ciemny"
 
 #### RENAME from planet_distance.py to (your_project_short_name).py
 # File structure
