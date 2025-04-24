@@ -19,15 +19,13 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
 
-
 def read_json_file(data_file):
     # Open and read the JSON file
     with open(data_file, "r") as file:
         json_data = json.load(file)
     return json_data
 
-
-def draw_logarithmic_ruler(object_distances, object_diameters):
+def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, highlight_object):
     # Calculate the extreme distance values
     min_distance = min(object_distances.values())
     max_distance = max(object_distances.values())
@@ -40,7 +38,7 @@ def draw_logarithmic_ruler(object_distances, object_diameters):
     fig, ax = plt.subplots(figsize=(10, 5))
     # ax.set_xscale('log')
     ax.set_xlim(log_min, log_max)
-    ax.set_ylim(-0.45, 0.5)  # slightly more extended to make room for all planets
+    ax.set_ylim(-0.7, 0.5)  # extended downward to make room for legend
 
     x_limits = ax.get_xlim()
     y_limits = ax.get_ylim()
@@ -55,7 +53,7 @@ def draw_logarithmic_ruler(object_distances, object_diameters):
 
     # Draw rectangle representing the ruler background
     ax.add_patch(plt.Rectangle((x_limits[0], y_limits[0]), x_range, 0.5*y_range, edgecolor='black',
-                               facecolor='none', linewidth=5))
+                                facecolor='none', linewidth=5))
 
     # Label the ruler units as AU
     ax.text(log_min + 0.1, -0.35, 'AU',
@@ -71,19 +69,15 @@ def draw_logarithmic_ruler(object_distances, object_diameters):
     ax_top.spines['right'].set_visible(False)
     ax_top.spines['left'].set_visible(False)
 
-    # ax_top.set_xscale("log")
     ax_top.set_xlim(x_limits)
-    # ax_top = ax.secondary_xaxis('top')
     ax_top.xaxis.set_major_locator(ticker.LogLocator(base=10.0, numticks=10))
     ax_top.set_xticks([np.log10(0.2), np.log10(0.5), 0, np.log10(2), np.log10(5), 1, np.log10(20), np.log10(50)])
     ax_top.set_xticklabels(['0.2', '0.5', '1', '2', '5', '10', '20', '50'])
-    # ax_top.xaxis.set_minor_locator(ticker.LogLocator(base=10.0, numticks=5))
     ax_top.tick_params(direction='out', length=10, width=2, colors='black', pad=5,
                        top=False, bottom=True, labeltop=False, labelbottom=True,
                        labelsize=24)
 
     for tick in ax_top.get_xticklabels():
-        # tick.set_fontname('Comic Sans MS')
         tick.set_fontname('American Typewriter')
 
     # Available Fonts
@@ -158,28 +152,35 @@ def draw_logarithmic_ruler(object_distances, object_diameters):
     jupiter_diameter = 1.42984e5
     giant_planet_reduction = 8
     small_planet_reduction = 3
+
     for obj, dist in object_distances.items():
         if obj in object_diameters:
             diameter = object_diameters[obj]
             if log_min <= np.log10(dist) <= log_max:
-                # Calculate the radius without logarithmic scaling
+                # Calculate radius without log scaling
                 if diameter < 0.1 * jupiter_diameter:
                     radius = diameter / (small_planet_reduction * jupiter_diameter)
                 else:
-                    radius = diameter / (
-                                giant_planet_reduction * jupiter_diameter)  # Adjust size to fit the visualization
+                    radius = diameter / (giant_planet_reduction * jupiter_diameter)
 
-                # print(radius)
-                if obj == "Earth":
-                    ax.add_patch(plt.Circle((np.log10(dist), 0.32), radius, color='blue', alpha=0.9))
-                    ax.text(np.log10(dist), 0.36, 'Earth', ha='center', va='bottom',
-                            color='blue', fontsize=14, fontname='American Typewriter')
-                    ax.annotate('', xy=(np.log10(dist), 0.0), xytext=(np.log10(dist), 0.30),
-                                arrowprops=dict(facecolor='blue', shrink=0.05, width=2, headwidth=8))
+                planet_color = planet_colors.get(obj, "black")
+
+                if obj == highlight_object:
+                    ax.add_patch(plt.Circle((np.log10(dist), 0.32), radius, color=planet_color, alpha=0.9))
+                    label_y = 0.36
+                    if obj in ["Jupiter", "Saturn"]:
+                        label_y = 0.42  # Saturn label
+                        if obj == "Jupiter":
+                            label_y = 0.45 # Jupiter label
+
+                    ax.text(np.log10(dist), label_y, obj, ha='center', va='bottom',
+                            color=planet_color, fontsize=14, fontname='American Typewriter')
+
+                    ax.annotate('', xy=(np.log10(dist), -0.11), xytext=(np.log10(dist), 0.32 - radius),
+                                arrowprops=dict(facecolor=planet_color, shrink=0.05, width=2, headwidth=8))
 
                 else:
-                    ax.add_patch(plt.Circle((np.log10(dist), 0.18), radius, color='black', alpha=0.9))
-                # ax.annotate(obj, (dist, -0.25), ha='center', va='top', fontsize=8, rotation=45)
+                    ax.add_patch(plt.Circle((np.log10(dist), 0.05), radius, color='black', alpha=0.9))
 
     # Add conversion legend for AU to miles and kilometers
     ax.text(log_min + 0.1, -0.55,
@@ -188,22 +189,27 @@ def draw_logarithmic_ruler(object_distances, object_diameters):
 
     ax.set_aspect('equal', 'box')
     ax.set_frame_on(False)
-    plt.show()
+
+    plt.savefig(f"{highlight_object}.png", dpi=300, bbox_inches='tight')
+    plt.close()
 
 
 if __name__ == '__main__':
     import matplotlib
 
-    # matplotlib.use('module://backend_interagg')
     matplotlib.use('macosx')
+
     planetary_distances = read_json_file("semimajor_axes.json")
     planetary_diameters = read_json_file("diameters.json")
-    draw_logarithmic_ruler(planetary_distances, planetary_diameters)
+    planet_colors = read_json_file("planet_colors.json")
+
+    for planet in planetary_distances.keys():
+        draw_logarithmic_ruler(planetary_distances, planetary_diameters, planet_colors, highlight_object=planet)
 
 # test_plot()
 
-# *** Will add a loop that prints out multiple visualizations. There will be 40 total including 20 just like this one
-# in black and white. There will be amother 20 that would be the same but in 1.5 inches. ***
+# *** Will add a loop that prints out multiple visualizations. There will be 44 total including 22 just like this one
+# in black and white. There will be another 22 that would be the same but in 1.5 inches. ***
 
 #### RENAME from planet_distance.py to (your_project_short_name).py
 # File structure

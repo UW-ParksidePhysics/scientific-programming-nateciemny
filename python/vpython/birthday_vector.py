@@ -47,3 +47,4 @@ vector_label = label(
     border=4,
     font='sans'
 )
+

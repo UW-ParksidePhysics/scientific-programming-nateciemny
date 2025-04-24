@@ -115,12 +115,12 @@ if __name__ == '__main__':
             star_absolute_magnitudes.append(abs_mag)
             star_b_minus_vs.append(data['blue_minus_visual'])
         except Exception:
-            continue  # skip invalid stars
+            continue
 
     star_absolute_magnitudes = np.array(star_absolute_magnitudes)
     star_b_minus_vs = np.array(star_b_minus_vs)
 
-    # Use dark style for plot
+    # Background
     plt.style.use('dark_background')
 
     # Reverse the absolute magnitude so that negative values appear on top
@@ -134,11 +134,11 @@ if __name__ == '__main__':
     plt.ylabel('Absolute Magnitude')
     plt.title('Hertzsprung-Russell Diagram')
 
-    # Make the axes identical to the model figure referenced at the top of this file
+    # Axis
     plt.xlim(-0.5, 2.0)
     plt.ylim(20, -10)
 
-    # Define the scatter marker size in points squared (make it similar to the model figure)
+    # Define size of points
     plt.scatter(star_b_minus_vs, star_absolute_magnitudes,
                 c=scaled_b_minus_v, cmap=hr_diagram_colormap,
                 s=1, edgecolors='none')
