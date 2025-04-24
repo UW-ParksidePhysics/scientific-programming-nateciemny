@@ -1,17 +1,17 @@
-Partner:
+Partner: Carter
 
 What Went Well
 ---
-
+We finished the second command line trasks
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: We could be more efficient in finding the repositories during the command line
 
-* Communication:
+* Communication: We could have talked a little more
 
-* Pacing:
+* Pacing: We could have done some fo the tasks a little faster
 
-* Division of responsibility
+* Division of responsibility: We did pretty good for each of our roles
 
-* Code quality:
+* Code quality: Most of it worked right away

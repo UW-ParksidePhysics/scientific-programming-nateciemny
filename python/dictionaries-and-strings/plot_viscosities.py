@@ -69,4 +69,3 @@ if __name__ == '__main__':
     data_file = 'viscosity_of_gases.dat'
     viscosity_data = parse_viscosity_data(data_file)
     plot_viscosity_curve(viscosity_data)
-

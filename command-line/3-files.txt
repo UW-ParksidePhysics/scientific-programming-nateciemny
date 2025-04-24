@@ -1,1 +1,153 @@
+Last login: Thu Feb 13 08:21:51 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+grnq61-102:~ ciemn001$ cd /Volumes/Home/
+grnq61-102:Home ciemn001$ ls
+ls: .: Operation not permitted
+grnq61-102:Home ciemn001$ 
+  [Restored Feb 13, 2025 at 8:32:01 AM]
+Last login: Thu Feb 13 08:31:51 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+grnq61-102:Home ciemn001$ ls
+ls: .: Operation not permitted
+grnq61-102:Home ciemn001$ 
+  [Restored Feb 17, 2025 at 4:23:29 PM]
+Last login: Mon Feb 17 16:23:19 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+grnq61-102:Home ciemn001$ 
+  [Restored Feb 18, 2025 at 10:22:08 AM]
+Last login: Tue Feb 18 10:21:58 on console
+date: illegal time format
+usage: date [-jnRu] [-I[date|hours|minutes|seconds]] [-f input_fmt]
+            [-r filename|seconds] [-v[+|-]val[y|m|w|d|H|M|S]]
+            [[[[mm]dd]HH]MM[[cc]yy][.SS] | new_date] [+output_fmt]
+-bash: Saving: command not found
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+grnq61-102:Home ciemn001$ 
+  [Restored Feb 20, 2025 at 8:01:39 AM]
+Last login: Thu Feb 20 08:01:28 on console
+date: illegal time format
+usage: date [-jnRu] [-I[date|hours|minutes|seconds]] [-f input_fmt]
+            [-r filename|seconds] [-v[+|-]val[y|m|w|d|H|M|S]]
+            [[[[mm]dd]HH]MM[[cc]yy][.SS] | new_date] [+output_fmt]
+-bash: Saving: command not found
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+D134619960:Home ciemn001$ 
+  [Restored Feb 25, 2025 at 9:31:24 AM]
+Last login: Tue Feb 25 09:31:15 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+D134619960:Home ciemn001$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D134619960:Home ciemn001$ cd /Volumes/Home/
+D134619960:Home ciemn001$ ls
+ls: .: Operation not permitted
+D134619960:Home ciemn001$ /Volumes/Home/Student/c/ciemn001 
+-bash: /Volumes/Home/Student/c/ciemn001: is a directory
+D134619960:Home ciemn001$ cd /Volumes/Home/Student/c/ciemn001 
+D134619960:ciemn001 ciemn001$ cd SP\ Repository/
+D134619960:SP Repository ciemn001$ cd command-line/
+D134619960:command-line ciemn001$ cp 3-f
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file ... target_directory
+D134619960:command-line ciemn001$ 
+D134619960:command-line ciemn001$ cp 3-files.txt backup_files.txt
+D134619960:command-line ciemn001$ mv backup_files.txt renamed_files.txt
+D134619960:command-line ciemn001$ rm renamed_files.txt 
+D134619960:command-line ciemn001$ mkdir practice_directory
+D134619960:command-line ciemn001$ touch shopping_list.txt
+D134619960:command-line ciemn001$ mv shopping_list.txt practice_directory/
+D134619960:command-line ciemn001$ rm -r practice_directory/
+D134619960:command-line ciemn001$ ls
+1-CONCEPTS.md		10-CONCEPTS.md		2-editing.txt		3-files.txt		4-directories.txt	5-mini-retro.txt	6-mini-retro.txt	7-mini-retro.txt	8-mini-retro.txt	9-mini-retro.txt
+1-introduction.txt	10-mini-retro.txt	2-mini-retro.txt	3-mini-retro.txt	4-mini-retro.txt	5-permissions.txt	6-searching.txt		7-processes.txt		8-redirection.txt	9-vi.txt
+1-mini-retro.txt	2-CONCEPTS.md		3-CONCEPTS.md		4-CONCEPTS.md		5-CONCEPTS.md		6-CONCEPTS.md		7-CONCEPTS.md		8-CONCEPTS.md		9-CONCEPTS.md
+D134619960:command-line ciemn001$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

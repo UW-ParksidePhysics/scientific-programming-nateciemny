@@ -1,0 +1,17 @@
+Partner: Carter
+
+What Went Well
+---
+We were able to start the code
+
+What Would Make Next Time 1% Better
+---
+* Focus: Be more efficient when typing
+
+* Communication: We could relay information more efficiently
+
+* Pacing: We could be more productive with each individual exercise
+
+* Division of responsibility: Not much could change
+
+* Code quality: No errors but code was not completed

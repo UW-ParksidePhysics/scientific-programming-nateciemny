@@ -35,8 +35,7 @@ def plot_logarithmic_sum_error(tolerances, errors, maximum_indices):
 
 
 if __name__ == '__main__':
-    # Step 1: Parse output file
+    
     tolerances, errors, maximum_indices = parse_sum_output('logarithmic_sum.out')
 
-    # Step 2: Plot results
     plot_logarithmic_sum_error(tolerances, errors, maximum_indices)

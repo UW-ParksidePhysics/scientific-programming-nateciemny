@@ -1,17 +1,17 @@
-Partner:
+Partner: Sophia
 
 What Went Well
 ---
-
+We completed the problems
 
 What Would Make Next Time 1% Better
----
-* Focus:
+--- practicing more on terminal
+* Focus: good
 
-* Communication:
+* Communication: good
 
-* Pacing:
+* Pacing: good
 
-* Division of responsibility
+* Division of responsibility: worked well
 
-* Code quality:
+* Code quality: Good but needed to restart a couple times

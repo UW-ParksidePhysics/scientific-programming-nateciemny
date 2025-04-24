@@ -1,17 +1,17 @@
-Partner:
+Partner: Professor
 
 What Went Well
 ---
-
+We finished all the tasks, and it made pretty good sense.
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: Felt pretty focused
 
-* Communication:
+* Communication: Driver could have spoken more aloud. Navigator could have known more vocabulary in advance.
 
-* Pacing:
+* Pacing: Quick and efficient
 
-* Division of responsibility
+* Division of responsibility: Good
 
-* Code quality:
+* Code quality: Files had the correct content
