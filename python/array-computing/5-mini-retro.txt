@@ -1,0 +1,17 @@
+Partner: Sophia
+
+What Went Well
+---
+Our code returned some value.
+
+What Would Make Next Time 1% Better
+---
+* Focus: We were focused for the most part.
+
+* Communication: our communication was good.
+
+* Pacing: We worked at a pretty good pace.
+
+* Division of responsibility: We each did a good job with our roles.
+
+* Code quality: Was not complete but it ran.

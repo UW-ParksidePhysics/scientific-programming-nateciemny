@@ -1,0 +1,532 @@
+brew install --verbose --debug FORMULA|CASK
+
+Contributing:
+  brew create URL [--no-fetch]
+  brew edit [FORMULA|CASK...]
+
+Further help:
+  brew commands
+  brew help [COMMAND]
+  man brew
+  https://docs.brew.sh
+D134619960:~ ciemn001$ brew install gfortran
+Error: /usr/local/Cellar is not writable. You should change the
+ownership and permissions of /usr/local/Cellar back to your
+user account:
+  sudo chown -R $(whoami) /usr/local/Cellar
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+#################################################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+#################################################################################################################################### 100.0%
+Warning: You are using macOS 14.
+We do not provide support for this pre-release version.
+It is expected behaviour that some formulae will fail to build in this pre-release version.
+It is expected behaviour that Homebrew will be buggy and slow.
+Do not create any issues about this on Homebrew's GitHub repositories.
+Do not create any issues even if you think this message is unrelated.
+Any opened issues will be immediately closed without response.
+Do not ask for help from Homebrew or its maintainers on social media.
+You may ask for help in Homebrew's discussions but are unlikely to receive a response.
+Try to figure out the problem yourself and submit a fix as a pull request.
+We will review it but may or may not accept it.
+
+Error: The following directories are not writable by your user:
+/usr/local/Cellar
+/usr/local/Frameworks
+/usr/local/Homebrew
+/usr/local/bin
+/usr/local/etc
+/usr/local/include
+/usr/local/lib
+/usr/local/lib/pkgconfig
+/usr/local/opt
+/usr/local/sbin
+/usr/local/share
+/usr/local/share/info
+/usr/local/share/man
+/usr/local/share/man/man1
+/usr/local/share/man/man3
+/usr/local/share/man/man5
+/usr/local/share/zsh
+/usr/local/share/zsh/site-functions
+/usr/local/var/homebrew/linked
+/usr/local/var/homebrew/locks
+
+You should change the ownership of these directories to your user.
+  sudo chown -R $(whoami) /usr/local/Cellar /usr/local/Frameworks /usr/local/Homebrew /usr/local/bin /usr/local/etc /usr/local/include /usr/local/lib /usr/local/lib/pkgconfig /usr/local/opt /usr/local/sbin /usr/local/share /usr/local/share/info /usr/local/share/man /usr/local/share/man/man1 /usr/local/share/man/man3 /usr/local/share/man/man5 /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/homebrew/linked /usr/local/var/homebrew/locks
+
+And make sure that your user has write permission.
+  chmod u+w /usr/local/Cellar /usr/local/Frameworks /usr/local/Homebrew /usr/local/bin /usr/local/etc /usr/local/include /usr/local/lib /usr/local/lib/pkgconfig /usr/local/opt /usr/local/sbin /usr/local/share /usr/local/share/info /usr/local/share/man /usr/local/share/man/man1 /usr/local/share/man/man3 /usr/local/share/man/man5 /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/homebrew/linked /usr/local/var/homebrew/locks
+D134619960:~ ciemn001$ clear
+
+D134619960:~ ciemn001$ ls 
+Desktop					Pictures				examp[le.txt
+Documents				Public					example.txt
+Downloads				PycharmProjects				logarithmic_sum.out
+Library					a.out					triples.x
+Movies					calculate_pythagorean_triples.c
+Music					calculate_pythagorean_triples.f90
+D134619960:~ ciemn001$ vi calculate_pythagorean_triples.c
+D134619960:~ ciemn001$ vi calculate_pythagorean_triples.c
+D134619960:~ ciemn001$ vi hypotenuse.c
+D134619960:~ ciemn001$ cc hypotenuse.c -o
+clang: error: argument to '-o' is missing (expected 1 value)
+D134619960:~ ciemn001$ man cc
+D134619960:~ ciemn001$ cc hypotenuse.c -c
+D134619960:~ ciemn001$ ls
+Desktop					Pictures				examp[le.txt
+Documents				Public					example.txt
+Downloads				PycharmProjects				hypotenuse.c
+Library					a.out					hypotenuse.o
+Movies					calculate_pythagorean_triples.c		logarithmic_sum.out
+Music					calculate_pythagorean_triples.f90	triples.x
+D134619960:~ ciemn001$ cc calculate_pythagorean_triples.c -c
+D134619960:~ ciemn001$ ls
+Desktop					Public					example.txt
+Documents				PycharmProjects				hypotenuse.c
+Downloads				a.out					hypotenuse.o
+Library					calculate_pythagorean_triples.c		logarithmic_sum.out
+Movies					calculate_pythagorean_triples.f90	triples.x
+Music					calculate_pythagorean_triples.o
+Pictures				examp[le.txt
+D134619960:~ ciemn001$ cc -o triples_c.x calculate_pythagorean_triples.o hypotenuse.o
+D134619960:~ ciemn001$ ls 
+Desktop					Public					example.txt
+Documents				PycharmProjects				hypotenuse.c
+Downloads				a.out					hypotenuse.o
+Library					calculate_pythagorean_triples.c		logarithmic_sum.out
+Movies					calculate_pythagorean_triples.f90	triples.x
+Music					calculate_pythagorean_triples.o		triples_c.x
+Pictures				examp[le.txt
+D134619960:~ ciemn001$ ls -l
+total 120
+drwx------+  9 ciemn001  UWP\Domain Users   288 Apr 14 13:31 Desktop
+drwx------+  6 ciemn001  UWP\Domain Users   192 Mar 13 08:55 Documents
+drwx------+  4 ciemn001  UWP\Domain Users   128 Mar 13 09:30 Downloads
+drwx------@ 81 ciemn001  UWP\Domain Users  2592 Apr  7 18:33 Library
+drwx------   3 ciemn001  UWP\Domain Users    96 Feb  4 08:00 Movies
+drwx------+  4 ciemn001  UWP\Domain Users   128 Feb  4 08:11 Music
+drwx------+  4 ciemn001  UWP\Domain Users   128 Feb  4 08:00 Pictures
+drwxr-xr-x+  4 ciemn001  UWP\Domain Users   128 Feb  4 08:00 Public
+drwxr-xr-x@  3 ciemn001  UWP\Domain Users    96 Feb  6 09:05 PycharmProjects
+-rwxr-xr-x   1 ciemn001  UWP\Domain Users  8480 Apr 24 08:18 a.out
+-rw-r--r--   1 ciemn001  UWP\Domain Users   634 Apr 24 08:56 calculate_pythagorean_triples.c
+-rw-r--r--   1 ciemn001  UWP\Domain Users   520 Apr 24 08:39 calculate_pythagorean_triples.f90
+-rw-r--r--   1 ciemn001  UWP\Domain Users  1160 Apr 24 09:03 calculate_pythagorean_triples.o
+-rw-r--r--@  1 ciemn001  UWP\Domain Users    46 Mar  6 09:06 examp[le.txt
+-rw-r--r--   1 ciemn001  UWP\Domain Users     0 Mar  6 09:04 example.txt
+-rw-r--r--   1 ciemn001  UWP\Domain Users   167 Apr 24 08:59 hypotenuse.c
+-rw-r--r--   1 ciemn001  UWP\Domain Users   840 Apr 24 09:02 hypotenuse.o
+-rw-r--r--   1 ciemn001  UWP\Domain Users     0 Apr  7 18:26 logarithmic_sum.out
+-rwxr-xr-x   1 ciemn001  UWP\Domain Users  8520 Apr 24 08:36 triples.x
+-rwxr-xr-x   1 ciemn001  UWP\Domain Users  8568 Apr 24 09:06 triples_c.x
+D134619960:~ ciemn001$ ./triples_c.x
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  14  48  50
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+  30  40  50
+D134619960:~ ciemn001$ ./triples_c.x 5
+   3   4   5
+D134619960:~ ciemn001$ ./triples_c.x 500
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  11  60  61
+  12  16  20
+  12  35  37
+  13  84  85
+  14  48  50
+  15  20  25
+  15  36  39
+  15 112 113
+  16  30  34
+  16  63  65
+  17 144 145
+  18  24  30
+  18  80  82
+  19 180 181
+  20  21  29
+  20  48  52
+  20  99 101
+  21  28  35
+  21  72  75
+  21 220 221
+  22 120 122
+  23 264 265
+  24  32  40
+  24  45  51
+  24  70  74
+  24 143 145
+  25  60  65
+  25 312 313
+  26 168 170
+  27  36  45
+  27 120 123
+  27 364 365
+  28  45  53
+  28  96 100
+  28 195 197
+  29 420 421
+  30  40  50
+  30  72  78
+  30 224 226
+  31 480 481
+  32  60  68
+  32 126 130
+  32 255 257
+  33  44  55
+  33  56  65
+  33 180 183
+  34 288 290
+  35  84  91
+  35 120 125
+  36  48  60
+  36  77  85
+  36 105 111
+  36 160 164
+  36 323 325
+  38 360 362
+  39  52  65
+  39  80  89
+  39 252 255
+  40  42  58
+  40  75  85
+  40  96 104
+  40 198 202
+  40 399 401
+  42  56  70
+  42 144 150
+  42 440 442
+  44 117 125
+  44 240 244
+  44 483 485
+  45  60  75
+  45 108 117
+  45 200 205
+  45 336 339
+  48  55  73
+  48  64  80
+  48  90 102
+  48 140 148
+  48 189 195
+  48 286 290
+  49 168 175
+  50 120 130
+  51  68  85
+  51 140 149
+  51 432 435
+  52 165 173
+  52 336 340
+  54  72  90
+  54 240 246
+  55 132 143
+  55 300 305
+  56  90 106
+  56 105 119
+  56 192 200
+  56 390 394
+  57  76  95
+  57 176 185
+  60  63  87
+  60  80 100
+  60  91 109
+  60 144 156
+  60 175 185
+  60 221 229
+  60 297 303
+  60 448 452
+  63  84 105
+  63 216 225
+  63 280 287
+  64 120 136
+  64 252 260
+  65  72  97
+  65 156 169
+  65 420 425
+  66  88 110
+  66 112 130
+  66 360 366
+  68 285 293
+  69  92 115
+  69 260 269
+  70 168 182
+  70 240 250
+  72  96 120
+  72 135 153
+  72 154 170
+  72 210 222
+  72 320 328
+  72 429 435
+  75 100 125
+  75 180 195
+  75 308 317
+  76 357 365
+  77 264 275
+  77 420 427
+  78 104 130
+  78 160 178
+  80  84 116
+  80 150 170
+  80 192 208
+  80 315 325
+  80 396 404
+  81 108 135
+  81 360 369
+  84 112 140
+  84 135 159
+  84 187 205
+  84 245 259
+  84 288 300
+  84 437 445
+  85 132 157
+  85 204 221
+  87 116 145
+  87 416 425
+  88 105 137
+  88 165 187
+  88 234 250
+  88 480 488
+  90 120 150
+  90 216 234
+  90 400 410
+  91 312 325
+  93 124 155
+  93 476 485
+  95 168 193
+  95 228 247
+  96 110 146
+  96 128 160
+  96 180 204
+  96 247 265
+  96 280 296
+  96 378 390
+  98 336 350
+  99 132 165
+  99 168 195
+  99 440 451
+ 100 105 145
+ 100 240 260
+ 102 136 170
+ 102 280 298
+ 104 153 185
+ 104 195 221
+ 104 330 346
+ 105 140 175
+ 105 208 233
+ 105 252 273
+ 105 360 375
+ 108 144 180
+ 108 231 255
+ 108 315 333
+ 108 480 492
+ 110 264 286
+ 111 148 185
+ 112 180 212
+ 112 210 238
+ 112 384 400
+ 112 441 455
+ 114 152 190
+ 114 352 370
+ 115 252 277
+ 115 276 299
+ 117 156 195
+ 117 240 267
+ 119 120 169
+ 119 408 425
+ 120 126 174
+ 120 160 200
+ 120 182 218
+ 120 209 241
+ 120 225 255
+ 120 288 312
+ 120 350 370
+ 120 391 409
+ 120 442 458
+ 123 164 205
+ 125 300 325
+ 126 168 210
+ 126 432 450
+ 128 240 272
+ 129 172 215
+ 130 144 194
+ 130 312 338
+ 132 176 220
+ 132 224 260
+ 132 351 375
+ 132 385 407
+ 132 475 493
+ 133 156 205
+ 133 456 475
+ 135 180 225
+ 135 324 351
+ 135 352 377
+ 136 255 289
+ 136 273 305
+ 138 184 230
+ 140 147 203
+ 140 171 221
+ 140 225 265
+ 140 336 364
+ 140 480 500
+ 141 188 235
+ 144 165 219
+ 144 192 240
+ 144 270 306
+ 144 308 340
+ 144 420 444
+ 145 348 377
+ 145 408 433
+ 147 196 245
+ 150 200 250
+ 150 360 390
+ 152 285 323
+ 152 345 377
+ 153 204 255
+ 153 420 447
+ 155 372 403
+ 155 468 493
+ 156 208 260
+ 156 320 356
+ 156 455 481
+ 159 212 265
+ 160 168 232
+ 160 231 281
+ 160 300 340
+ 160 384 416
+ 161 240 289
+ 162 216 270
+ 165 220 275
+ 165 280 325
+ 165 396 429
+ 168 224 280
+ 168 270 318
+ 168 315 357
+ 168 374 410
+ 168 425 457
+ 170 264 314
+ 170 408 442
+ 171 228 285
+ 174 232 290
+ 175 288 337
+ 175 420 455
+ 176 210 274
+ 176 330 374
+ 176 468 500
+ 177 236 295
+ 180 189 261
+ 180 240 300
+ 180 273 327
+ 180 299 349
+ 180 385 425
+ 180 432 468
+ 183 244 305
+ 184 345 391
+ 185 444 481
+ 186 248 310
+ 189 252 315
+ 189 340 389
+ 190 336 386
+ 190 456 494
+ 192 220 292
+ 192 256 320
+ 192 360 408
+ 195 216 291
+ 195 260 325
+ 195 400 445
+ 196 315 371
+ 198 264 330
+ 198 336 390
+ 200 210 290
+ 200 375 425
+ 201 268 335
+ 203 396 445
+ 204 253 325
+ 204 272 340
+ 207 224 305
+ 207 276 345
+ 208 306 370
+ 208 390 442
+ 210 280 350
+ 210 416 466
+ 213 284 355
+ 216 288 360
+ 216 405 459
+ 219 292 365
+ 220 231 319
+ 222 296 370
+ 224 360 424
+ 224 420 476
+ 225 272 353
+ 225 300 375
+ 228 304 380
+ 228 325 397
+ 231 308 385
+ 231 392 455
+ 232 435 493
+ 234 312 390
+ 237 316 395
+ 238 240 338
+ 240 252 348
+ 240 275 365
+ 240 320 400
+ 240 364 436
+ 240 418 482
+ 243 324 405
+ 246 328 410
+ 249 332 415
+ 252 275 373
+ 252 336 420
+ 252 405 477
+ 255 340 425
+ 255 396 471
+ 258 344 430
+ 260 273 377
+ 260 288 388
+ 261 348 435
+ 261 380 461
+ 264 315 411
+ 264 352 440
+ 266 312 410
+ 267 356 445
+ 270 360 450
+ 273 364 455
+ 276 368 460
+ 279 372 465
+ 280 294 406
+ 280 342 442
+ 280 351 449
+ 282 376 470
+ 285 380 475
+ 288 330 438
+ 288 384 480
+ 291 388 485
+ 294 392 490
+ 297 304 425
+ 297 396 495
+ 300 315 435
+ 300 400 500
+ 319 360 481
+ 320 336 464
+ 325 360 485
+ 340 357 493

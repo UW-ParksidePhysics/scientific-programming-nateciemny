@@ -1,1 +1,67 @@
 
+D134619959:~ tucke039$ ps
+  PID TTY           TIME CMD
+ 4420 ttys000    0:00.01 -bash
+ 4286 ttys001    0:00.02 -bash
+ 4366 ttys001    0:00.00 sleep 100
+ 4414 ttys001    0:00.01 ping google.com
+D134619959:~ tucke039$ kill 4366
+D134619959:~ tucke039$ kill 4414
+D134619959:~ tucke039$ top
+
+
+
+
+Last login: Thu Apr  3 08:44:06 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+D134619959:~ tucke039$ ps
+  PID TTY           TIME CMD
+ 4070 ttys000    0:00.02 -bash
+ 4275 ttys000    0:00.05 vi sample.txt
+ 4286 ttys001    0:00.01 -bash
+D134619959:~ tucke039$ kill 4275
+D134619959:~ tucke039$ kill 4070
+D134619959:~ tucke039$ ps
+  PID TTY           TIME CMD
+ 4070 ttys000    0:00.03 -bash
+ 4286 ttys001    0:00.02 -bash
+D134619959:~ tucke039$ sleep 100 &
+[1] 4366
+D134619959:~ tucke039$ jobs
+[1]+  Running                 sleep 100 &
+D134619959:~ tucke039$ fg
+sleep 100
+^Z
+[1]+  Stopped                 sleep 100
+D134619959:~ tucke039$ ping google.com &
+[2] 4414
+D134619959:~ tucke039$ PING google.com (64.233.185.100): 56 data bytes
+64 bytes from 64.233.185.100: icmp_seq=0 ttl=98 time=27.060 ms
+64 bytes from 64.233.185.100: icmp_seq=1 ttl=98 time=27.074 ms
+64 bytes from 64.233.185.100: icmp_seq=2 ttl=98 time=27.161 ms
+64 bytes from 64.233.185.100: icmp_seq=3 ttl=98 time=27.081 ms
+64 bytes from 64.233.185.100: icmp_seq=4 ttl=98 time=27.374 ms
+64 bytes from 64.233.185.100: icmp_seq=5 ttl=98 time=27.302 ms
+64 bytes from 64.233.185.100: icmp_seq=6 ttl=98 time=27.319 ms
+64 bytes from 64.233.185.100: icmp_seq=7 ttl=98 time=27.380 ms
+64 bytes from 64.233.185.100: icmp_seq=8 ttl=98 time=27.073 ms
+64 bytes from 64.233.185.100: icmp_seq=9 ttl=98 time=27.081 ms
+64 bytes from 64.233.185.100: icmp_seq=10 ttl=98 time=27.144 ms
+64 bytes from 64.233.185.100: icmp_seq=11 ttl=98 time=27.362 ms
+64 bytes from 64.233.185.100: icmp_seq=12 ttl=98 time=27.213 ms
+64 bytes from 64.233.185.100: icmp_seq=13 ttl=98 time=27.357 ms
+64 bytes from 64.233.185.100: icmp_seq=14 ttl=98 time=27.392 ms
+64 bytes from 64.233.185.100: icmp_seq=15 ttl=98 time=27.336 ms
+64 bytes from 64.233.185.100: icmp_seq=16 ttl=98 time=27.315 ms
+64 bytes from 64.233.185.100: icmp_seq=17 ttl=98 time=27.308 ms
+64 bytes from 64.233.185.100: icmp_seq=18 ttl=98 time=27.102 ms
+64 bytes from 64.233.185.100: icmp_seq=19 ttl=98 time=27.089 ms
+64 bytes from 64.233.185.100: icmp_seq=20 ttl=98 time=26.998 ms
+
+[1]+  Terminated: 15          sleep 100
+[2]-  Terminated: 15          ping google.com
+D134619959:~ tucke039$ kill 4469
+D134619959:~ tucke039$

@@ -1,1 +1,56 @@
 
+Last login: Thu Apr 17 07:58:55 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Mac619948:~ smith518$ vi text.txt
+Mac619948:~ smith518$ vi test.py
+Mac619948:~ smith518$ cat test.py
+def my_funtion():
+	print("Hello, world!")
+	output = 5+3
+	print(f"The result is {result}")
+
+if __name__ == '__main__':
+	my_function()
+Mac619948:~ smith518$ python test.py
+-bash: python: command not found
+Mac619948:~ smith518$ python3 test.py
+Traceback (most recent call last):
+  File "/Users/smith518/test.py", line 7, in <module>
+    my_function()
+    ^^^^^^^^^^^
+NameError: name 'my_function' is not defined. Did you mean: 'my_funtion'?
+Mac619948:~ smith518$ vi test.py
+Mac619948:~ smith518$ cat test.py
+def my_function():
+	print("Hello, world!")
+	output = 5+3
+	print(f"The result is {result}")
+
+if __name__ == '__main__':
+	my_function()
+Mac619948:~ smith518$ python3 test.py
+Hello, world!
+Traceback (most recent call last):
+  File "/Users/smith518/test.py", line 7, in <module>
+    my_function()
+    ~~~~~~~~~~~^^
+  File "/Users/smith518/test.py", line 4, in my_function
+    print(f"The result is {result}")
+                           ^^^^^^
+NameError: name 'result' is not defined
+Mac619948:~ smith518$ vi test.py
+Mac619948:~ smith518$ cat test.py
+def my_function():
+	print("Hello, world!")
+	output = 5+3
+	print(f"The result is {output}")
+
+if __name__ == '__main__':
+	my_function()
+Mac619948:~ smith518$ python3 test.py
+Hello, world!
+The result is 8
+Mac619948:~ smith518$

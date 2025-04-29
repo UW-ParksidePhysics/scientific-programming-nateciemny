@@ -1,17 +1,17 @@
-Partner:
+Partner: Rileigh
 
 What Went Well
 ---
-
+We were able to complete the command line assignment
 
 What Would Make Next Time 1% Better
----
-* Focus:
+--- Communication
+* Focus: I would say my focus was good
 
-* Communication:
+* Communication: It definitely could have been better
 
-* Pacing:
+* Pacing: It went a little bit slower than expected but it worked out
 
-* Division of responsibility
+* Division of responsibility: This area could have used some work
 
-* Code quality:
+* Code quality: The code ended up working so I would say it was good quality

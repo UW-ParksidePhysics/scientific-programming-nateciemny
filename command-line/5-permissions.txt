@@ -1,1 +1,60 @@
-
+D134619959:documents genti003$ touch notes.txt
+D134619959:documents genti003$ ls -l notes.txt
+-rw-r--r--  1 genti003  UWP\Domain Users  0 Mar 20 08:30 notes.txt
+D134619959:documents genti003$ chmod u+x notes.txt
+D134619959:documents genti003$ chmod o-r notes.txt
+D134619959:documents genti003$ ls -l
+total 0
+-rwxr-----  1 genti003  UWP\Domain Users  0 Mar 20 08:30 notes.txt
+D134619959:documents genti003$ rm notes.txt
+D134619959:documents genti003$ rm file notes.txt
+rm: file: No such file or directory
+rm: notes.txt: No such file or directory
+D134619959:documents genti003$ echo '#!/bin/sh\necho
+> "hello, world!"' >script.sh
+D134619959:documents genti003$ ./script.sh
+-bash: ./script.sh: Permission denied
+D134619959:documents genti003$ chmod 1234
+usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
+	chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
+D134619959:documents genti003$ chmod 7
+usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
+	chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
+D134619959:documents genti003$ chmod 755
+usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
+	chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
+D134619959:documents genti003$ chmod new_user script.sh
+chmod: Invalid file mode: new_user
+D134619959:documents genti003$ rm script.sh
+D134619959:documents genti003$ echo '#!/bin/sh\necho "hello, World!"' > script.sh
+D134619959:documents genti003$ ./script.sh
+-bash: ./script.sh: Permission denied
+D134619959:documents genti003$ chown 75
+usage: chown [-fhnvx] [-R [-H | -L | -P]] owner[:group] file ...
+       chown [-fhnvx] [-R [-H | -L | -P]] :group file ...
+D134619959:documents genti003$ ls script.sh
+script.sh
+D134619959:documents genti003$ chmod 755
+usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
+	chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
+D134619959:documents genti003$ ls -l
+total 8
+-rw-r--r--  1 genti003  UWP\Domain Users  32 Mar 20 08:40 script.sh
+D134619959:documents genti003$ ls -l script.sh
+-rw-r--r--  1 genti003  UWP\Domain Users  32 Mar 20 08:40 script.sh
+D134619959:documents genti003$ ls script.sh
+script.sh
+D134619959:documents genti003$ chmod 755 script.sh
+D134619959:documents genti003$ ls -l
+total 8
+-rwxr-xr-x  1 genti003  UWP\Domain Users  32 Mar 20 08:40 script.sh
+D134619959:documents genti003$ vi script.sh
+D134619959:documents genti003$ ls -l 
+total 8
+-rwxr-xr-x  1 genti003  UWP\Domain Users  31 Mar 20 08:47 script.sh
+D134619959:documents genti003$ ls -l script.sh
+-rwxr-xr-x  1 genti003  UWP\Domain Users  31 Mar 20 08:47 script.sh
+D134619959:documents genti003$ rm script.sh
+D134619959:documents genti003$ ls
+D134619959:documents genti003$ ls
+D134619959:documents genti003$ 

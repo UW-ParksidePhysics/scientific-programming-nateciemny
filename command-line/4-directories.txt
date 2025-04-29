@@ -1,1 +1,43 @@
+Last login: Thu Mar 13 08:01:30 on ttys000
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+D134619960:~ ciemn001$ 
+D134619960:~ ciemn001$ cd Documents
+D134619960:Documents ciemn001$ mkdir lesson4-practice
+D134619960:Documents ciemn001$ cd lesson4-practice
+D134619960:lesson4-practice ciemn001$ mkdir data/2025
+mkdir: data: No such file or directory
+D134619960:lesson4-practice ciemn001$ mkdir -p lesson4-practice/date/2025
+D134619960:lesson4-practice ciemn001$ cd Documents
+-bash: cd: Documents: No such file or directory
+D134619960:lesson4-practice ciemn001$ cd Documents
+-bash: cd: Documents: No such file or directory
+D134619960:lesson4-practice ciemn001$ find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/date
+lesson4-practice/date/2025
+D134619960:lesson4-practice ciemn001$ rmdir lesson4-practice/data/2025
+rmdir: lesson4-practice/data/2025: No such file or directory
+D134619960:lesson4-practice ciemn001$ rmdir -p lesson4-practice/data/2025
+rmdir: lesson4-practice/data/2025: No such file or directory
+D134619960:lesson4-practice ciemn001$ rm -r lesson4-practice/data/2025
+rm: lesson4-practice/data/2025: No such file or directory
+D134619960:lesson4-practice ciemn001$ find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/date
+lesson4-practice/date/2025
+D134619960:lesson4-practice ciemn001$ cd Documents
+-bash: cd: Documents: No such file or directory
+D134619960:lesson4-practice ciemn001$ rmdir lesson4-practice/date/2025
+D134619960:lesson4-practice ciemn001$ 
+D134619960:lesson4-practice ciemn001$ cd Documents
+-bash: cd: Documents: No such file or directory
+D134619960:lesson4-practice ciemn001$ mkdir projects
+D134619960:lesson4-practice ciemn001$ mkdir -p projects/frontend projects/backend projects/datebase
+D134619960:lesson4-practice ciemn001$ find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/date
+D134619960:lesson4-practice ciemn001$ rm -r projects
+D134619960:lesson4-practice ciemn001$ 
