@@ -208,7 +208,7 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
                     ax.text(np.log10(dist), label_y, obj, ha='center', va='bottom',
                             color=label_color, fontsize=14 * scale, fontname='Arial')
 
-                    ax.annotate('', xy=(np.log10(dist), -0.12),
+                    ax.annotate('', xy=(np.log10(dist), -0.11),
                                 xytext=(np.log10(dist), 0.32 - radius),
                                 arrowprops=dict(facecolor=planet_color, edgecolor=planet_color, shrink=0.05, width=2 * scale,
                                                 headwidth=8 * scale))
@@ -235,7 +235,7 @@ if __name__ == '__main__':
 
     if platform.system() == 'Darwin':  # Mac
         matplotlib.use('macosx')
-    else:  # Windows or Linux
+    else:  # Windows or other
         matplotlib.use('Agg')
 
     planetary_distances = read_json_file("semimajor_axes.json")
