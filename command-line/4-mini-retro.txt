@@ -14,4 +14,4 @@ What Would Make Next Time 1% Better
 
 * Division of responsibility: We did pretty good for each of our roles
 
-* Code quality: Most of it worked right away
+* Code quality: Most of it worked right away.
