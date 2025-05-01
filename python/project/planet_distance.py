@@ -177,9 +177,9 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
     # for obj, dist in object_distances.items():
     #     if log_min <= np.log10(dist) <= log_max:
     #         ax.annotate(obj, (dist, -0.25), ha='center', va='top', fontsize=8, rotation=45)
-    jupiter_diameter = 1.42984e5  # Km
-    giant_planet_reduction = 8  # Scale for large planets
-    small_planet_reduction = 3  # Scale for small planets
+    jupiter_diameter = 1.42984e5 # Km
+    giant_planet_reduction = 8 # Scale for large planets
+    small_planet_reduction = 3 # Scale for small planets
 
     for obj, dist in object_distances.items():
         if obj in object_diameters:
@@ -210,8 +210,7 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
 
                     ax.annotate('', xy=(np.log10(dist), -0.12),
                                 xytext=(np.log10(dist), 0.32 - radius),
-                                arrowprops=dict(facecolor=planet_color, edgecolor=planet_color, shrink=0.05,
-                                                width=2 * scale,
+                                arrowprops=dict(facecolor=planet_color, edgecolor=planet_color, shrink=0.05, width=2 * scale,
                                                 headwidth=8 * scale))
 
                 else:
@@ -257,7 +256,7 @@ if __name__ == '__main__':
 # 1. Commented paragraph describing project ~ 100-200 words
 # 2. Module imports that are used in multiple functions
 # 3. Function definitions
-# 4. if __name__ == "__main__" block, which calls a primary function with a clear name
+# 4. if __name__ == "__main__" block, which calls a primary function with a clear name 
 
 # All code is inside function definitions for simulation solution & visualization (functional programming)
 #	Each function contains a docstring compliant with PEP 257: https://www.python.org/dev/peps/pep-0257/
@@ -267,15 +266,15 @@ if __name__ == '__main__':
 #	1. Module imports
 #		Use SciPy constants for physical constants in particular function (not globally)
 #			https://docs.scipy.org/doc/scipy/reference/constants.html
-#		Follow best practice order:
+#		Follow best practice order: 
 #			https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module
 # 	2. Simulation parameters
 #		Each parameter named clearly and units marked in in-line comment
-#		Naming of all variables should comply with PEP 8:
+#		Naming of all variables should comply with PEP 8: 
 #			https://www.python.org/dev/peps/pep-0008/#documentation-strings
 #			(lower_case_with_underscores)
 # 	3. Computed parameters (from simulation parameters)
 # 	4. Function calls (use PEP 8-compliant lower_case_with_underscores) and simple calculations for:
 #		data read-in
-#		simulation solution
+#		simulation solution 
 #		visualization

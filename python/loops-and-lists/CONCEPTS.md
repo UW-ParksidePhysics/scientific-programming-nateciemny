@@ -1,5 +1,5 @@
 # Concepts
-* * Data Type
+* Data Type
 * List
 * Nested List
 * Argument
