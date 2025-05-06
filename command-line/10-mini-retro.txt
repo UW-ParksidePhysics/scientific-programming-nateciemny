@@ -1,17 +1,17 @@
-Partner:
+Partner: Riley
 
 What Went Well
 ---
-
+We completed the tasks
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: Was good
 
-* Communication:
+* Communication: We communicated well
 
-* Pacing:
+* Pacing: Could be slightly quicker
 
-* Division of responsibility
+* Division of responsibility: Was well
 
-* Code quality:
+* Code quality: The code ran well
