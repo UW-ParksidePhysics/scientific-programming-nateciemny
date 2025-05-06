@@ -251,9 +251,6 @@ if __name__ == '__main__':
 
 # test_plot()
 
-# *** Will add a loop that prints out multiple visualizations. There will be 44 total including 22 just like this one
-# in black and white. There will be another 22 that would be the same but in 1.5 inches. ***
-
 #### RENAME from planet_distance.py to (your_project_short_name).py
 # File structure
 # 1. Commented paragraph describing project ~ 100-200 words
