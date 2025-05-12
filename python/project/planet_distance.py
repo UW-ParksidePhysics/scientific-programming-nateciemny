@@ -189,5 +189,6 @@ if __name__ == '__main__':
     for planet in planetary_distances.keys():
         for figure_height in [3.5, 1.5]:
             for coloring_scheme in ['all color', 'highlight color', 'all black']:
+                print(f"Generating: {planet}, {figure_height}\" figure, scheme: {coloring_scheme}")
                 draw_logarithmic_ruler(planetary_distances, planetary_diameters, planet_colors, highlight_object=planet,
                                        color_scheme=coloring_scheme, figure_height=figure_height)
