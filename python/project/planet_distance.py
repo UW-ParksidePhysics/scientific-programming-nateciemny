@@ -55,11 +55,9 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
     minimum_distance = min(object_distances.values())
     maximum_distance = max(object_distances.values())
 
-    # Define the range for the logarithmic scale
     log_minimum = np.floor(np.log10(minimum_distance))
     log_maximum = np.ceil(np.log10(maximum_distance))
 
-    # Generate the logarithmic ruler
     fig, ax = plt.subplots(figsize=(10, figure_height))
     ax.set_xlim(log_minimum, log_maximum)
     ax.set_ylim(-0.7, 0.5)
@@ -87,7 +85,6 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
     ax.text(log_minimum + 0.1, -0.35, 'AU',
             ha='left', va='center', fontsize=18 * scale, fontname='Arial', color='black')
 
-    # Add axis at top of rectangle
     ax_top = ax.inset_axes([x_limits[0], y_limits[0] + 0.49 * y_range, x_range, 0.001],
                            transform=ax.transData, zorder=2)
 
