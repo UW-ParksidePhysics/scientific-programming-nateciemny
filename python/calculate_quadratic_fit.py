@@ -9,13 +9,13 @@ import numpy
 
 def calculate_quadratic_fit(data):
     """
-    Fit a quadratic polynomial to a two-row x-y dataset.
+    Fit quadratic polynomial to a two-row x-y dataset
 
     Parameters:
-        data: x-y data array of shape (2, M)
+        data: x-y data array of shape
 
     Returns:
-        Array of shape (3,) with polynomial coefficients:
+        Array of shape with polynomial coefficients:
         [constant_term, linear_term, quadratic_term]
     """
     if data.ndim != 2 or data.shape[0] != 2:

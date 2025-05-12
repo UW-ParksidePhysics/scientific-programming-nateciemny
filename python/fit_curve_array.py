@@ -9,16 +9,16 @@ import numpy
 
 def fit_curve_array(quadratic_coefficients, minimum_x, maximum_x, number_of_points=100):
     """
-    Create a fit curve from quadratic coefficients and x-limits.
+    Create fit curve from quadratic coefficients and x-limits
 
     Parameters:
-        quadratic_coefficients: list or array of length 3 [constant, linear, quadratic]
+        quadratic_coefficients: list or array of length 3
         minimum_x: starting x-value for fit curve
         maximum_x: ending x-value for fit curve
-        number_of_points: number of points in the output curve (default is 100)
+        number_of_points: number of points in the output curve
 
     Returns:
-        2-row array of x and y values: shape (2, number_of_points)
+        2-row array of x and y values: shape
 
     Raises:
         ArithmeticError: if maximum_x < minimum_x

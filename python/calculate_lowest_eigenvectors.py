@@ -9,15 +9,15 @@ import numpy
 
 def calculate_lowest_eigenvectors(square_matrix, number_of_eigenvectors=3):
     """
-    Calculate eigenvectors corresponding to the smallest eigenvalues of a square matrix.
+    Calculate eigenvectors corresponding to the smallest eigenvalues of a square matrix
 
     Parameters:
-        square_matrix: 2D square array (shape (M, M))
-        number_of_eigenvectors: number of lowest eigenvalues to return (default is 3)
+        square_matrix: 2D square array
+        number_of_eigenvectors: number of lowest eigenvalues to return
 
     Returns:
         eigenvalues: 1D array of K smallest eigenvalues, sorted
-        eigenvectors: 2D array of shape (K, M), each row is an eigenvector
+        eigenvectors: 2D array of shape, each row is an eigenvector
     """
     if square_matrix.shape[0] != square_matrix.shape[1]:
         raise ValueError("Input matrix must be square.")

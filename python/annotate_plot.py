@@ -11,7 +11,7 @@ import datetime
 
 def annotate_plot(annotations):
     """
-    Add annotations to a plot using label text and formatting information.
+    Add annotations to plot using label text and formatting information
 
     Parameters:
         annotations: dictionary with label strings as keys and value dictionaries that include:

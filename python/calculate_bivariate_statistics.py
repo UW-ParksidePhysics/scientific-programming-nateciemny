@@ -11,13 +11,13 @@ from scipy import stats
 
 def calculate_bivariate_statistics(data):
     """
-    Calculate statistical characteristics of a 2-row x-y dataset.
+    Calculate statistical characteristics of 2-row x-y dataset
 
     Parameters:
-        data: x-y data array of shape (2, M)
+        data: x-y data array of shape
 
     Returns:
-        Array of shape (6,) containing:
+        Array of shape containing:
         [mean of y, standard deviation of y, min x, max x, min y, max y]
     """
     if data.ndim != 2 or data.shape[0] != 2 or data.shape[1] <= 1:

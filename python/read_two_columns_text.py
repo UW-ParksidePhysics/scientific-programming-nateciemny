@@ -11,13 +11,13 @@ import os
 
 def read_two_columns_text(filename):
     """
-    Read in two columns of numerical data from a text file.
+    Read in two columns of numerical data from text file
 
     Parameters:
-        filename: name of the file to be read
+        filename: name of file to be read
 
     Returns:
-        2D array of shape (2, M) containing x-y data
+        2D array of shape containing x-y data
     """
     if not os.path.isfile(filename):
         raise OSError(f"The file '{filename}' was not found.")

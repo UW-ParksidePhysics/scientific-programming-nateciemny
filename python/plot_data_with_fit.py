@@ -10,16 +10,16 @@ import matplotlib.pyplot as pyplot
 
 def plot_data_with_fit(data, fit_curve, data_format='o', fit_format=''):
     """
-    Create a combined scatter and curve plot for x-y data and its fit curve.
+    Create a combined scatter and curve plot for x-y data and its fit curve
 
     Parameters:
-        data: 2-row array of x-y values (shape (2, M))
-        fit_curve: 2-row array of x-y values (shape (2, N)), from fitted polynomial
-        data_format: optional format string for data points (default 'o')
-        fit_format: optional format string for fit curve (default '')
+        data: 2-row array of x-y values
+        fit_curve: 2-row array of x-y values, from fitted polynomial
+        data_format: optional format string for data points
+        fit_format: optional format string for fit curve
 
     Returns:
-        List of Line2D plot objects (the result of pyplot.plot calls)
+        List of Line2D plot objects
     """
     data_plot = pyplot.plot(data[0], data[1], data_format)
     fit_plot = pyplot.plot(fit_curve[0], fit_curve[1], fit_format)
