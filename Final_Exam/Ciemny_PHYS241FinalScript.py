@@ -1,6 +1,5 @@
 """
 Final project script for PHYS241 — Equation of State and Quantum Analysis.
-
    Fits a Murnaghan equation of state to DFT energy–volume data, and:
    - Extracts metadata from the file name.
    - Normalizes data per atom based on crystal symmetry.
