@@ -47,7 +47,7 @@ def parse_file_name(file_name):
     return chemical_symbol, crystal_symmetry_symbol, density_functional_approximation
 
 if __name__ == "__main__":
-    display_graph = True  # Set to False when saving PNGs
+    display_graph = True
     file_name = "Al.Fm-3m.GGA-PBE.volumes_energies.dat"
     chemical_symbol, crystal_symmetry_symbol, density_functional_approximation = parse_file_name(file_name)
     data_array = read_two_columns_text(file_name)
