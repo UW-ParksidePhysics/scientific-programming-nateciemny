@@ -7,6 +7,7 @@ Raises IndexError if the array does not have two rows or has fewer than two data
 __author__ = "Nate Ciemny"
 
 import numpy
+from numpy.ma.core import minimum, maximum
 from scipy import stats
 
 def calculate_bivariate_statistics(data):
@@ -29,13 +30,13 @@ def calculate_bivariate_statistics(data):
     description = stats.describe(y_values)
 
     mean_y = description.mean
-    std_dev_y = numpy.sqrt(description.variance)
-    min_x = numpy.min(x_values)
-    max_x = numpy.max(x_values)
-    min_y = description.minmax[0]
-    max_y = description.minmax[1]
+    standard_deviation_y = numpy.sqrt(description.variance)
+    minimum_x = numpy.min(x_values)
+    maximum_x = numpy.max(x_values)
+    minimum_y = description.minmax[0]
+    maximum_y = description.minmax[1]
 
-    return numpy.array([mean_y, std_dev_y, min_x, max_x, min_y, max_y])
+    return numpy.array([mean_y, standard_deviation_y, minimum_x, maximum_x, minimum_y, maximum_y])
 
 if __name__ == "__main__":
     x_values = numpy.linspace(-10, 10, 100)

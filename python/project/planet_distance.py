@@ -36,7 +36,6 @@ def read_json_file(data_file):
 def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, highlight_object, color_scheme="color highlighted", figure_height=5):
     """
   Draw distance ruler with planets scaled to relative diameters.
-
   Args:
       object_distances (dict): Dictionary of distances between planets.
       object_diameters (dict): Dictionary of diameters between planets.
@@ -44,10 +43,8 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
       highlight_object (str): Highlight object.
       color_scheme (bool): If True, convert to color_scheme.
       figure_height (int): Figure height in inches.
-
     Returns:
         None. Saves file for each version of ruler.
-
     """
 
     scale = figure_height / 5 # Relative to 5 inch base
@@ -71,17 +68,14 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
 
-    # Draw rectangle representing the ruler background
     ax.add_patch(plt.Rectangle((x_limits[0], y_limits[0]), x_range, 0.5 * y_range, edgecolor='black',
                                 facecolor='none', linewidth=5 * scale))
 
-    # Create arc to represent the Sun
     sun_circle = plt.Circle((log_minimum - 0.35, 0.15), 0.5, color='gold', zorder=1)
     ax.add_patch(sun_circle)
     ax.add_patch(plt.Rectangle((x_limits[0], y_limits[0]), x_range, 0.5 * y_range, edgecolor='black',
                                facecolor='none', linewidth=5 * scale))
 
-    # Label the ruler units as AU
     ax.text(log_minimum + 0.1, -0.35, 'AU',
             ha='left', va='center', fontsize=18 * scale, fontname='Arial', color='black')
 
@@ -105,8 +99,8 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
         tick.set_fontname('Arial')
 
     jupiter_diameter = 1.42984e5 # Km
-    giant_planet_reduction = 8 # Scale for large planets
-    small_planet_reduction = 3 # Scale for small planets
+    giant_planet_reduction = 8
+    small_planet_reduction = 3
 
     for object, distance in object_distances.items():
         if object in object_diameters:
@@ -137,7 +131,6 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
                     ax.text(np.log10(distance), label_y, object, ha='center', va='bottom',
                             color=label_color, fontsize=14 * scale, fontname='Arial')
 
-                    # Create arrow (head sizes relative to size of image)
                     if figure_height <= 1.6:
                         arrow_style = f"Fancy,head_length={1 * scale},head_width={0.5 * scale},tail_width={0.25 * scale}"
                     else:
@@ -151,7 +144,6 @@ def draw_logarithmic_ruler(object_distances, object_diameters, planet_colors, hi
                 else:
                     ax.add_patch(plt.Circle((np.log10(distance), 0.05), radius, color= label_color, alpha=0.9))
 
-    # Add conversion legend for AU to miles and kilometers
     ax.text(log_minimum + 0.1, -0.55,
             "1 AU ≈ 93 million miles ≈ 150 million kilometers",
             ha='left', va='top', fontsize=14 * scale, fontname='Arial')
@@ -176,7 +168,7 @@ if __name__ == '__main__':
 # Used ChatGPT. Prompt: "What would I add to this code so that it can run on both mac and windows depending on which one I use"
     if platform.system() == 'Darwin':  # Mac
         matplotlib.use('macosx')
-    else:  # Windows or other
+    else:  # Windows
         matplotlib.use('Agg')
 
     planetary_distances = read_json_file("semimajor_axes.json")
